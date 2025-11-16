@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Royal Bites | Restaurant Menu</title>
+ <link rel="stylesheet" href="style.css"> <!-- # The CSS file gives style and layout to the page -->
+</head>
+<body>
+
+  <!-- # The navigation bar helps users move to different sections of the website -->
+  <nav class="navbar">
+    <div class="logo">The Royal Bites</div>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- # The hero section is the top banner that welcomes visitors -->
+  <!-- # It gives a strong first impression with a title, message and button -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Welcome to The Royal Bites</h1>
+      <p>The Best Food in Town | Open Everyday 9 AM - 10 PM</p>
+      <a href="#menu" class="btn">Explore Menu</a>
+    </div>
+  </header>
+
+  <!-- # The menu section displays the list of food items available -->
+  <!-- # It is divided into categories like Main Course and Special Menu -->
+  <section id="menu" class="menu">
+    <h2>Our Menu</h2>
+    <p class="menu-sub">Delicious dishes prepared with love and care</p>
+
+    <!-- # The main course section shows popular regular food items -->
+    <h3>Main Course</h3>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <img src="picture1.jpg" alt="Fried Rice">
+        <h4>Fried Rice <span>Rs. 350</span></h4>
+        <p>Delicious rice mixed with chicken, egg, and fresh veggies.</p>
+        <button onclick="addToCart('Fried Rice')">Order Now</button>
+      </div>
+
+      <div class="menu-item">
+        <img src="picture2.jpg" alt="Masala Dosa">
+        <h4>Masala Dosa <span>Rs. 400</span></h4>
+        <p>Crispy dosa filled with spicy potato and served with chutney.</p>
+        <button onclick="addToCart('Masala Dosa')">Order Now</button>
+      </div>
+
+      <div class="menu-item">
+        <img src="image3.jpg" alt="Grilled Chicken">
+        <h4>Grilled Chicken <span>Rs. 480</span></h4>
+        <p>Juicy chicken grilled to perfection with herbs and spices.</p>
+        <button onclick="addToCart('Grilled Chicken')">Order Now</button>
+      </div>
+    </div>
+
+    <!-- # The special menu section highlights special or premium items -->
+    <h3>Special Menu</h3>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <img src="picture3.jpg" alt="Pasta Alfredo">
+        <h4>Pasta Alfredo <span>Rs. 350</span></h4>
+        <p>Creamy Alfredo pasta topped with cheese and herbs.</p>
+        <button onclick="addToCart('Pasta Alfredo')">Order Now</button>
+      </div>
+
+      <div class="menu-item">
+        <img src="picture4.jpg" alt="Cheese Pizza">
+        <h4>Cheese Pizza <span>Rs. 420</span></h4>
+        <p>Freshly baked pizza with mozzarella and tomato sauce.</p>
+        <button onclick="addToCart('Cheese Pizza')">Order Now</button>
+      </div>
+
+      <div class="menu-item">
+        <img src="picture6.jpg" alt="Chocolate Shake">
+        <h4>Chocolate Shake <span>Rs. 200</span></h4>
+        <p>Thick, creamy chocolate milkshake with whipped cream.</p>
+        <button onclick="addToCart('Chocolate Shake')">Order Now</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- # The contact section lets customers get in touch with the restaurant -->
+  <!-- # It includes address, phone, email and a form to send messages -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>We would love to hear from you! Reach out for bookings or feedback.</p>
+
+    <div class="contact-container">
+      <!-- # The contact info area shows basic details like address, phone and email -->
+      <div class="contact-info">
+        <h3> Address</h3>
+        <p>Main Street, Biratnagar, Nepal</p>
+
+        <h3> Phone</h3>
+        <p>+977 9809234567</p>
+
+        <h3> Email</h3>
+        <p>info@theroyalbites.com</p>
+      </div>
+
+      <!-- # The contact form allows users to send a direct message -->
+      <form class="contact-form" onsubmit="sendMessage(event)">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <textarea id="message" rows="4" placeholder="Write your message..." required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- # The JavaScript file is linked at the end for dynamic functions like order and message -->
+   <script src="script.js"></script>
+</body>
+</html>

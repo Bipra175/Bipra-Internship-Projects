@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Product List</title>
+  <!-- This is the bootstrap link for design -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="p-4">
+  <div class="container">
+    <h2>Product List</h2>
+    <!-- The add button to add new data -->
+    <a href="/add" class="btn btn-success mb-3">Add Product</a>
+
+    <!-- product table -->
+    <table class="table table-bordered">
+      <tr>
+        <th>ID</th><th>Name</th><th>Price</th><th>Qty</th><th>Action</th>
+      </tr>
+
+      <!-- The given aprt below shows all the products information -->
+      {% for p in products %}
+      <tr>
+        <td>{{ p.id }}</td>
+        <td>{{ p.name }}</td>
+        <td>{{ p.price }}</td>
+        <td>{{ p.quantity }}</td>
+        <td>
+          <a href="/edit/{{ p.id }}" class="btn btn-primary btn-sm">Edit</a>
+          <a href="/delete/{{ p.id }}" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?')">Delete</a>
+        </td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+</body>
+</html>
